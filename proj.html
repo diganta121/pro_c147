@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proj</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="carpet"
+                src="https://imgs.search.brave.com/uiR8ngDUf2FYXOJSqMAl58YkGvJc4jKvPcdqhLTQiM4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTMw/NTU3ODgwL3Bob3Rv/L3RleHR1cmUtY2Fy/cGV0LWNvdmVyaW5n/LWdyYXkuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPXFBR21o/bFBxUUlTbXRiWVk2/b04tMFdKZzhpcEcy/SE10TjNsdlFkMXVI/UEk9">
+            <img id="wall" src="./images/brick.jpg">
+
+            <img id="poster1"
+                src="https://imgs.search.brave.com/8Hv4jV-EsK39MiupMGk1-wdyA-c9RmdNZVN24LK7Ky0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90ZW1w/bGF0ZS5jYW52YS5j/b20vRUFEYW9wNElt/NVkvMS8wLzI4M3ct/T1BpbmdzczZHNmMu/anBn">
+            <img id="poster2"
+                src="https://imgs.search.brave.com/iXH1Pklfj4YJGCRckW1iSq7ecxZrQCSAw_3gtHwhHkw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/bWFkZS1hLXBvc3Rl/ci12YWd1ZWx5LWJh/c2VkLW9uLXRyYXZl/bC1wb3N0ZXJzLXYw/LXltYTVvYW13enB0/YzEuanBlZz93aWR0/aD02NDAmY3JvcD1z/bWFydCZhdXRvPXdl/YnAmcz04Y2IzMzUw/M2FmZWMxNDgyOWY3/NDFjMWM1MjdhOWQ2/MzY2NzY5MGMy">
+            <img id="wood" src="./images/wood.jpg">
+
+        </a-assets>
+
+        <a-entity>
+            <a-camera position="0 0 10"></a-camera>
+        </a-entity>
+
+        <a-entity light="type: ambient; intensity: 0.3;"></a-entity>
+
+        <a-plane position="0 -5 -1" src="#wood" height="10" width="20" rotation="-90 0 0" ></a-plane>
+        <a-plane position="0 -4.9 -1" src="#carpet" height="5" width="10" rotation="-90 0 0"></a-plane>
+
+        <a-cone position="0 -4 -1" rotation="180 0 0" height="2" color="#000"></a-cone>
+        <a-cone position="0 -4.5 -1" height="0.5" color="#000"></a-cone>
+
+        <a-plane position="0 -2.8 -1" src="#carpet" height="5" width="5" rotation="-90 0 0 "></a-plane>
+
+        <a-plane position="0 0 -5.5" src="#wall" height="10" width="20" rotation="0 0 0"></a-plane>
+        <a-plane position="3 -1 -4.9" scale="4 7 1" src="#poster1"></a-plane>
+        <a-plane position="-3 -1 -4.9" scale="4 7 1" src="#poster2"></a-plane>
+        <a-cylinder position="0 5 0" radius="0.2" height="7" src="#wood"></a-cylinder>
+        <a-cone position="0 3 0" radius="0.3" height="5" src="#wood"></a-cone>
+        <a-sphere position="0 0.4 0" radius="0.5" color="yellow"></a-sphere>
+
+        <a-entity light="type: directional; castShadow: true; intensity: 1; distance: 50; decay: 2; color:white"
+            position="0 4 -1"></a-entity>
+
+        <a-entity position="-5 -4 0">
+            <a-cylinder position="0 0.5 0" src="#wood" radius="0.2"></a-cylinder>
+            <a-cylinder position="-0.5 2 0" rotation="0 0 90" color="grey" height="0.1"></a-cylinder>
+
+            <a-box scale="1 0.1 1" color="grey"></a-box>
+            <a-box position="0 1 0" color="grey" scale="1 0.1 1"></a-box>
+
+
+        </a-entity>
+        <a-entity position="5 -4 0" rotation="0 180 0 ">
+            <a-cylinder position="0 0.5 0" src="#wood" radius="0.2"></a-cylinder>
+            <a-cylinder position="-0.5 2 0" rotation="0 0 90" color="grey" height="0.1"></a-cylinder>
+
+            <a-box scale="1 0.1 1" color="grey"></a-box>
+            <a-box position="0 1 0" color="grey" scale="1 0.1 1"></a-box>
+
+
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
